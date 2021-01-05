@@ -1,0 +1,483 @@
+/*----------------------------*/
+/*VARIABLES*/
+/*----------------------------*/
+/*COLORES*/
+/*FUENTES*/
+/*----------------------------*/
+/*GENERALES*/
+/*----------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-size: 16px;
+  font-family: 'Merriweather', serif;
+  color: #3b3324;
+}
+a {
+  text-decoration: none;
+  color: #3b3324;
+  transition: all 0.3s ease;
+}
+ul {
+  list-style: none;
+}
+.seccion-titulo h2 {
+  font-size: 1.5625rem;
+  font-family: 'Nanum Myeongjo', serif;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 1rem;
+  margin-top: 3.75rem;
+}
+.seccion-titulo p {
+  font-size: 0.9375rem;
+  line-height: 1.6rem;
+}
+.contenedor {
+  width: 95%;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+/*----------------------------*/
+/*ENCABEZADO*/
+/*----------------------------*/
+header .menu-movil .menu-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  min-height: 3.625rem;
+  background: #fff;
+  z-index: 99;
+  position: fixed;
+}
+header .menu-movil .menu-top .burger-menu {
+  cursor: pointer;
+  font-size: 1.875rem;
+  background: #ab974f;
+  color: #fff;
+  padding: 0.625rem;
+  position: fixed;
+  left: 0;
+}
+header .menu-movil .menu-top .top-informacion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.875rem;
+}
+header .menu-movil .menu-top .top-informacion p {
+  padding-left: 2.1875rem;
+}
+header .menu-movil .slide-menu {
+  position: fixed;
+  top: 0;
+  background: #fff;
+  padding: 5.625rem 3.125rem;
+  width: 100vw;
+  height: 100vh;
+  z-index: 5;
+  left: -150%;
+  transition: all 0.3s ease;
+}
+header .menu-movil .slide-menu .menu-principal a {
+  display: block;
+  padding: 1.875rem 0;
+  border-bottom: 1px solid #76323f;
+}
+header .menu-movil .slide-menu.active {
+  left: 0;
+}
+header .portada {
+  padding-top: 3.625rem;
+  height: 100vh;
+  background-image: url("../img/hotel.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+header .portada .overlay {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  z-index: 1;
+}
+header .portada .logo {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  margin-top: 35vh;
+  cursor: default;
+}
+header .portada .logo img {
+  width: 90%;
+  max-width: 43.75rem;
+}
+/*----------------------------*/
+/*NOSOTROS*/
+/*----------------------------*/
+.nosotros {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.nosotros .seccion-titulo {
+  width: 95%;
+  max-width: 43.75rem;
+}
+.nosotros .seccion-titulo p {
+  text-align: center;
+}
+.nosotros .seccion-titulo p:last-child {
+  padding-bottom: 3rem;
+}
+.nosotros .servicios {
+  width: 100%;
+  background: #76323f;
+  padding-bottom: 3.5rem;
+}
+.nosotros .servicios .seccion-titulo {
+  color: #fff;
+  margin: 0 auto;
+}
+.nosotros .servicios .seccion-serv {
+  width: 95%;
+  max-width: 93.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+}
+.nosotros .servicios .seccion-serv .sec-serv {
+  width: 100%;
+  padding: 2rem 0;
+  background: #fff;
+  color: #76323f;
+  text-align: center;
+  margin-top: 0.9375rem;
+}
+.nosotros .servicios .seccion-serv .sec-serv i {
+  font-size: 2.1875rem;
+  margin-bottom: 1.125rem;
+}
+.nosotros .servicios .seccion-serv .sec-serv p {
+  font-size: 1.125rem;
+}
+/*----------------------------*/
+/*HABITACIONES*/
+/*----------------------------*/
+.habitaciones > .seccion-titulo p {
+  text-align: center;
+  font-size: 1rem;
+  font-style: italic;
+}
+.habitaciones .contenido-habitaciones {
+  margin: 2.5rem 0 1rem;
+}
+.habitaciones .contenido-habitaciones .tipo-habitacion {
+  display: flex;
+  justify-content: center;
+  font-weight: 600;
+}
+.habitaciones .contenido-habitaciones .tipo-habitacion li a {
+  padding: 0 0.9375rem 0.3125rem;
+  display: block;
+  border-bottom: 2px solid transparent;
+}
+.habitaciones .contenido-habitaciones .tipo-habitacion li a:hover {
+  color: #76323f;
+}
+.habitaciones .contenido-habitaciones .tipo-habitacion li.active a {
+  color: #76323f;
+  border-bottom: 2px solid #3b3324;
+}
+.habitaciones .detalle-habitacion {
+  border: 3px solid #f0f0f0;
+  padding: 1rem;
+}
+.habitaciones .detalle-habitacion .imagen-hab img {
+  width: 100%;
+}
+.habitaciones .detalle-habitacion .seccion-titulo {
+  background: #fff;
+}
+.habitaciones .detalle-habitacion .seccion-titulo h2 {
+  margin-top: 2rem;
+  font-weight: 600;
+}
+.habitaciones .detalle-habitacion > div {
+  transition: all 0.3s ease;
+}
+.habitaciones .detalle-habitacion .active {
+  display: block;
+}
+/*----------------------------*/
+/*EVENTOS*/
+/*----------------------------*/
+.eventos {
+  background: #f0f0f0;
+}
+.eventos .contenedor {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+.eventos .contenedor .seccion-titulo p {
+  margin-bottom: 2rem;
+}
+.eventos .contenedor .col {
+  width: 100%;
+}
+.eventos .contenedor .col.izq {
+  overflow: hidden;
+}
+.eventos .contenedor .col .slider {
+  width: 300%;
+  display: flex;
+}
+.eventos .contenedor .col .slider .slide {
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+}
+.eventos .contenedor .col .slider .slide.foto1 {
+  background-image: url('../img/salon1.png');
+}
+.eventos .contenedor .col .slider .slide.foto2 {
+  background-image: url('../img/salon2.png');
+}
+.eventos .contenedor .col .slider .slide.foto3 {
+  background-image: url('../img/salon3.png');
+}
+/*----------------------------*/
+/*RESERVA*/
+/*----------------------------*/
+.reserva .seccion-titulo p {
+  margin-bottom: 1.5rem;
+}
+.reserva .formulario {
+  width: 90%;
+  max-width: 31.25rem;
+  padding: 2.5rem;
+  position: relative;
+  z-index: 3;
+  background: #fff;
+  margin: 0 auto;
+}
+.reserva .formulario .form-contacto .input-group {
+  position: relative;
+  margin-bottom: 2rem;
+}
+.reserva .formulario .form-contacto .input-group input[type="text"],
+.reserva .formulario .form-contacto .input-group input[type="email"],
+.reserva .formulario .form-contacto .input-group input[type="tel"],
+.reserva .formulario .form-contacto .input-group textarea {
+  font-family: 'Merriweather', serif;
+  font-size: 0.9375rem;
+  padding: 0.4rem;
+  color: #3b3324;
+  width: 100%;
+  outline: none;
+  vertical-align: top;
+  border: 1px solid #000;
+  background: #fff;
+}
+.reserva .formulario .form-contacto .input-group input[type="text"]:focus,
+.reserva .formulario .form-contacto .input-group input[type="email"]:focus,
+.reserva .formulario .form-contacto .input-group input[type="tel"]:focus,
+.reserva .formulario .form-contacto .input-group textarea:focus {
+  border-color: #76323f;
+}
+.reserva .formulario .form-contacto .input-group textarea {
+  resize: none;
+  max-height: 6.25rem;
+}
+.reserva .formulario .form-contacto .input-group label {
+  font-family: 'Merriweather', serif;
+  font-size: 0.875rem;
+  color: #3b3324;
+}
+.reserva .formulario .form-contacto .input-group label.label {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  transition: all 0.3s ease;
+}
+.reserva .formulario .form-contacto .input-group label.label.active {
+  top: -1.3rem;
+}
+.reserva .formulario .form-contacto input[type="submit"] {
+  font-family: 'Merriweather', serif;
+  font-size: 1rem;
+  color: #fff;
+  width: 100%;
+  padding: 0.5rem;
+  background: #76323f;
+  outline: none;
+  cursor: pointer;
+  border-radius: 0.3125rem;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+.reserva .formulario .form-contacto input[type="submit"]:hover {
+  background: #52232c;
+}
+.reserva .contacto {
+  background-image: url('../img/habitacion.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  margin-top: -5.625rem;
+}
+.reserva .contacto .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.reserva .contacto .contenedor {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  position: relative;
+  z-index: 2;
+  padding: 4rem 0;
+}
+.reserva .contacto .contenedor .item {
+  background: #fff;
+  color: #3b3324;
+  text-align: center;
+  padding: 2rem 1rem;
+  width: 80%;
+  max-width: 18.75rem;
+  margin: 3rem 0;
+}
+.reserva .contacto .contenedor .item h2 {
+  margin-bottom: 1rem;
+}
+.reserva .contacto .contenedor .item p {
+  font-size: 15px;
+}
+/*----------------------------*/
+/*PIE DE PÁGINA*/
+/*----------------------------*/
+footer {
+  background: #f0f0f0;
+}
+footer .fbody {
+  padding: 2rem 1rem;
+  text-align: center;
+  border-bottom: 1px solid #76323f;
+}
+footer .fbody i {
+  color: #76323f;
+  font-size: 1.25rem;
+  padding: 0 1.5rem;
+  cursor: pointer;
+}
+footer .ffooter {
+  padding: 1rem 0;
+  text-align: center;
+}
+footer .ffooter p {
+  font-size: 0.75rem;
+}
+/*----------------------------*/
+/*MEDIA QUERIES*/
+/*----------------------------*/
+@media all and (min-width: 1000px) {
+  header .menu-movil {
+    display: none;
+  }
+  header .menu-pc {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.3rem 3.5rem;
+    background: #fff;
+    z-index: 5;
+    position: fixed;
+    top: 0;
+  }
+  header .menu-pc .menu-principal a {
+    margin-right: 0.5rem;
+    padding: 0  2rem;
+    border-right: 1px solid #f0f0f0;
+  }
+  header .menu-pc .menu-principal a:last-child {
+    margin-right: 0;
+    border-right: none;
+  }
+  header .menu-pc .menu-principal a:hover {
+    color: #76323f;
+  }
+  header .menu-pc .top-redes i {
+    padding: 0 1.5rem;
+    font-size: 1.125rem;
+    cursor: pointer;
+    color: #76323f;
+  }
+}
+@media all and (min-width: 700px) {
+  .servicios .seccion-serv .sec-serv {
+    margin-left: 0.9375rem;
+    max-width: 25rem;
+  }
+}
+@media all and (min-width: 800px) {
+  .eventos {
+    margin-top: 3.75rem;
+    padding: 4rem 0;
+  }
+  .eventos .col {
+    max-width: 50%;
+  }
+  .eventos .col .seccion-titulo {
+    margin-right: 0.9375rem;
+  }
+  .reserva .contenedor .seccion-titulo {
+    padding: 0 3rem;
+  }
+  .reserva .contacto {
+    display: flex;
+    height: 50rem;
+    align-items: center;
+    margin-top: -10rem;
+  }
+  .habitaciones .detalle-habitacion {
+    border: none;
+    position: relative;
+  }
+  .habitaciones .detalle-habitacion .imagen-hab img {
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+  }
+  .habitaciones .detalle-habitacion .seccion-titulo {
+    position: absolute;
+    z-index: 2;
+    width: 16.875rem;
+    padding: 0 2rem;
+    top: 6.25rem;
+    box-shadow: -5px 15px 20px #f0f0f0;
+  }
+  .habitaciones .detalle-habitacion .seccion-titulo p {
+    text-align: center;
+    padding-bottom: 1rem;
+  }
+}

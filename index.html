@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<title>Hotel Roma</title>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.0/css/all.css" integrity="sha384-Mmxa0mLqhmOeaE8vgOSbKacftZcsNYDjQzuCOm6D02luYSzBG8vpaOykv9lFQ51Y" crossorigin="anonymous">
-	<link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Nanum+Myeongjo:wght@400;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
@@ -14,9 +14,15 @@
 	<header>
 		<!-- Menú versión movil -->
 		<div class="menu-movil">
+			<div class="menu-top">
+				<div class="burger-menu" id="burger-menu">
+					<i class="fas fa-bars"></i>
+				</div>
 
-			<div class="burger-menu" id="burger-menu">
-				<i class="fas fa-bars"></i>
+				<div class="top-informacion">
+					<p>+51-044-56 6685</p>
+					<p>reservaciones@romahotel.pe</p>
+				</div>
 			</div>
 
 			<div class="slide-menu" id="slide-menu">
@@ -30,15 +36,10 @@
 				</nav>
 			</div>
 
-			<a href="" class="logo">
-				<img src="img/logo.png" alt="Hotel Roma">
-			</a>
-
 		</div>
 		<!-- Menú versión movil -->
 
-
-		<!-- Menú versión PC
+		<!-- Menú versión PC -->
 		<div class="menu-pc">
 
 			<nav class="menu-principal">
@@ -49,17 +50,20 @@
 
 			</nav>
 
-			<a href="" class="logo">
-				<img src="img/logo.png" alt="Hotel Roma">
-			</a>
-
-			<div class="top-informacion">
-				<span>+51-044-56 6685 </span>
-				<span>reservaciones@romahotel.pe</span>
+			<div class="top-redes">
+				<i class="fab fa-facebook-f"></i>
+				<i class="fab fa-instagram"></i>
 			</div>
 
 		</div>
-		Menú versión PC -->
+		<!-- Menú versión PC -->
+
+		<div class="portada">
+			<div class="overlay"></div>
+			<a href="" class="logo">
+				<img src="img/logo.png" alt="Hotel Roma">
+			</a>
+		</div>
 
 	</header>
 	<!-- Encabezado -->
@@ -70,34 +74,40 @@
 		<!-- Seccion Nosotros-->
 		<section class="nosotros" id="nosotros">
 			
-			<div class="nosotros-infor">
+			<div class="seccion-titulo">
 				<h2>NOSOTROS</h2>
 				<p>Roma Hotel es un moderno hotel de tres estrellas ubicado a pocos metros del centro de la ciudad de Guadalupe. Brindamos al huésped una cálida estadía durante su permanencia garantizando seguridad, comodidad y confort. </p>
 				<p>El hotel también cuenta con hermosas habitaciónes de estilo clásico que te brindarán una experiencia única.</p>
 			</div>
 
 			<div class="servicios">
-				<h2>DISFRUTA DE NUESTROS SERVICIOS</h2>
-				<div class="sec-serv">
-					<i class="fas fa-car"></i>
-					<p>COCHERA</p>
-				</div>
+				<div class="contenedor">
+					<div class="seccion-titulo">
+						<h2>DISFRUTA DE NUESTROS SERVICIOS</h2>
+					</div>
+					
+					<div class="seccion-serv">
+						<div class="sec-serv">
+							<i class="fas fa-car"></i>
+							<p>COCHERA</p>
+						</div>
 
-				<div class="sec-serv">
-					<i class="fas fa-wifi"></i>
-					<p>WIFI GRATIS</p>
-				</div>
+						<div class="sec-serv">
+							<i class="fas fa-wifi"></i>
+							<p>WIFI GRATIS</p>
+						</div>
 
-				<div class="sec-serv">
-					<i class="fas fa-glass-martini-alt"></i>
-					<p>BAR</p>
-				</div>
+						<div class="sec-serv">
+							<i class="fas fa-glass-martini-alt"></i>
+							<p>BAR</p>
+						</div>
 
-				<div class="sec-serv">
-					<i class="fas fa-shower"></i>
-					<p>AGUA CALIENTE</p>
-				</div>
-
+						<div class="sec-serv">
+							<i class="fas fa-shower"></i>
+							<p>AGUA CALIENTE</p>
+						</div>
+					</div>
+				</div>	
 			</div>
 
 		</section>
@@ -105,49 +115,53 @@
 
 		<!-- Seccion Habitaciones -->
 		<section class="habitaciones" id="habitaciones">
-			
-			<h2>HABITACIONES</h2>
-
-			<div class="contenido-habitaciones" id="contenido-habitaciones">
-				<ul class="tipo-habitacion">
-					<li><a href="">SIMPLE</a></li>
-					<li><a href="">DOBLE</a></li>
-					<li><a href="">MATRIMONIAL</a></li>
-				</ul>
+			<div class="seccion-titulo">
+				<h2>HABITACIONES</h2>
+				<p>Disfruta del máximo comfort</p>
 			</div>
 
-			<div class="detalle-habitacion" id="detalle-habitacion">
-
-				<div id="simple">
-					<div class="imagen-hab">
-						<img src="img/simple.png" alt="">
-					</div>
-					<div class="texto">
-						<h2>SIMPLE</h2>
-						<p>Consta de una cama de 1 1/2 plaza ideal para personas solteras o que viajan solas. Cada habitación cuenta con televisión con cable, agua caliente las 24 horas y acceso a internet WIFI.</p>
-					</div>
+			<div class="contenedor">
+				<div class="contenido-habitaciones" id="contenido-habitaciones">
+					<ul class="tipo-habitacion">
+						<li><a href="#simple">SIMPLE</a></li>
+						<li><a href="#doble">DOBLE</a></li>
+						<li><a href="#matrimonial">MATRIMONIAL</a></li>
+					</ul>
 				</div>
 
-				<div id="doble">
-					<div class="imagen-hab">
-						<img src="img/doble.png" alt="">
-					</div>
-					<div class="texto">
-						<h2>DOBLE</h2>
-						<p>Consta de 2 camas de 1 1/2 plaza, destinada a huéspedes exigentes que buscan un descanso placentero. Cada habitación cuenta con televisión con cable, agua caliente y acceso a WIFI.</p>
-					</div>
-				</div>
+				<div class="detalle-habitacion" id="detalle-habitacion">
 
-				<div id="matrimonial">
-					<div class="imagen-hab">
-						<img src="img/matrimonial.png" alt="">
+					<div id="simple">
+						<div class="imagen-hab">
+							<img src="img/simple.png" alt="">
+						</div>
+						<div class="seccion-titulo">
+							<h2>SIMPLE</h2>
+							<p>Consta de una cama de 1 1/2 plaza ideal para personas solteras o que viajan solas. Cada habitación cuenta con televisión con cable, agua caliente las 24 horas y acceso a internet WIFI.</p>
+						</div>
 					</div>
-					<div class="texto">
-						<h2>MATRIMONIAL</h2>
-						<p>Consta de 1 cama, destinada a parejas que busquen confort. Cada habitación posee mesita de noche, una mesa para que realice sus trabajos, televisión con cable, agua caliente y acceso a WIFI.</p>
-					</div>
-				</div>
 
+					<div id="doble">
+						<div class="imagen-hab">
+							<img src="img/doble.png" alt="">
+						</div>
+						<div class="seccion-titulo">
+							<h2>DOBLE</h2>
+							<p>Consta de 2 camas de 1 1/2 plaza, destinada a huéspedes exigentes que buscan un descanso placentero. Cada habitación cuenta con televisión con cable, agua caliente y acceso a WIFI.</p>
+						</div>
+					</div>
+
+					<div id="matrimonial">
+						<div class="imagen-hab">
+							<img src="img/matrimonial.png" alt="">
+						</div>
+						<div class="seccion-titulo">
+							<h2>MATRIMONIAL</h2>
+							<p>Consta de 1 cama, destinada a parejas que busquen confort. Cada habitación posee mesita de noche, una mesa para que realice sus trabajos, televisión con cable, agua caliente y acceso a WIFI.</p>
+						</div>
+					</div>
+
+				</div>
 			</div>
 
 		</section>
@@ -179,6 +193,42 @@
 		<!-- Seccion Reserva -->
 		<section class="reserva" id="reserva">
 
+			<div class="contenedor">
+				<div class="seccion-titulo">
+					<h2>RESERVAR</h2>
+					<p>Si desea hacer una reservación y desea que uno de nuestros agentes se comunique con sted, por favor mandenos sus datos y gustosamente nos comunicaremos con usted.</p>
+				</div>
+
+				<div class="formulario">
+					<form action="" class="form-contacto" name="form-contacto">
+						<div>
+							<div class="input-group">
+								<input type="text" id="nombre" name="nombre">
+								<label class="label" for="nombre">Nombre</label>
+							</div>
+
+							<div class="input-group">
+								<input type="email" id="email" name="email">
+								<label class="label" for="email">Email</label>
+							</div>
+
+							<div class="input-group">
+								<input type="tel" id="telefono" name="telefono">
+								<label class="label" for="telefono">Teléfono</label>
+							</div>
+
+							<div class="input-group">
+								<textarea name="mensaje" id="mensaje"></textarea>
+								<label class="label" for="mensaje">Mensaje</label>
+							</div>
+
+							<input type="submit" value="Enviar">
+						</div>
+					</form>
+					
+				</div>
+			</div>
+
 			<div class="contacto parallax">
 				<div class="overlay"></div>
 				<div class="contenedor">
@@ -199,40 +249,6 @@
 				</div>
 			</div>
 
-			<div class="formulario">
-				<div class="seccion-titulo">
-					<h2>RESERVAR</h2>
-					<p>Si desea hacer una reservación y desea que uno de nuestros agentes se comunique con usted, por favor mandenos sus datos y gustosamente nos comunicaremos con usted.</p>
-				</div>
-
-				<form action="" class="form-contacto" name="form-contacto">
-					<div>
-						<div class="input-group">
-							<input type="text" id="nombre" name="nombre">
-							<label class="label" for="nombre">Nombre</label>
-						</div>
-
-						<div class="input-group">
-							<input type="email" id="email" name="email">
-							<label class="label" for="email">Email</label>
-						</div>
-
-						<div class="input-group">
-							<input type="tel" id="telefono" name="telefono">
-							<label class="telefono" for="telefono">Teléfono</label>
-						</div>
-
-						<div class="input-group">
-							<textarea name="mensaje" id="mensaje"></textarea>
-							<label class="mensaje" for="mensaje">Mensaje</label>
-						</div>
-
-						<input type="submit" value="Enviar">
-					</div>
-				</form>
-				
-			</div>
-
 		</section>
 		<!-- Seccion Reserva -->
 
@@ -242,11 +258,8 @@
 	<!-- Footer -->
 	<footer>
 		<div class="fbody">
-			<img src="img/logo.png" alt="Hotel Roma">
-			<p>+51-044-56 6685 </p>
-			<p>reservaciones@romahotel.pe</p>
-			<p>Jr.Triunfo Nro. 172</p>
 			<i class="fab fa-facebook-f"></i>
+			<i class="fab fa-instagram"></i>
 		</div>
 		<div class="ffooter">
 			<p>&copy;Todos los derechos reservados</p>

@@ -1,0 +1,624 @@
+/*----------------------------*/
+/*VARIABLES*/
+/*----------------------------*/
+
+/*COLORES*/
+@dorado: #ab974f;
+@gris:#f0f0f0;
+@vino:#76323f;
+@blanco:#fff;
+@texto-oscuro: #3b3324;
+@negro: #000;
+
+/*FUENTES*/
+@principal: 'Merriweather', serif;
+@secundaria: 'Nanum Myeongjo', serif;
+
+/*----------------------------*/
+/*GENERALES*/
+/*----------------------------*/
+*{
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body{
+	font-size: 16px;
+	font-family: @principal;
+	color: @texto-oscuro;
+}
+
+a{
+	text-decoration: none;
+	color: @texto-oscuro;
+	-webkit-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	transition: all .3s ease;
+}
+
+ul{
+	list-style: none;
+}
+
+.seccion-titulo{
+	h2{
+		font-size: 1.5625rem;
+		font-family: @secundaria;
+		font-weight: 400;
+		text-align: center;
+		margin-bottom: 1rem;
+		margin-top: 3.75rem;
+	}
+	p{
+		font-size: .9375rem;
+		line-height: 1.6rem;
+	}
+}
+
+.contenedor{
+	width: 95%;
+	max-width: 1080px;
+	margin: 0 auto;
+}
+
+/*----------------------------*/
+/*ENCABEZADO*/
+/*----------------------------*/
+header{
+
+	.menu-movil{
+		.menu-top{
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+			width:100%;
+			min-height: 3.625rem;
+			background: @blanco;
+			z-index: 99;
+			position: fixed;
+
+			.burger-menu{
+				cursor: pointer;
+				font-size: 1.875rem;
+				background: @dorado;
+				color: @blanco;
+				padding: 0.625rem;
+				position: fixed;
+				left:0;
+			}
+
+			.top-informacion{	
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				font-size: .875rem;
+				p{
+					padding-left: 2.1875rem;
+				}
+			}
+		}
+
+		.slide-menu{
+			position: fixed;
+			top: 0;
+			background: @blanco;
+			padding: 5.625rem 3.125rem;
+			width: 100vw;
+			height: 100vh;
+			z-index: 5;
+			left: -150%;
+			-webkit-transition: all .3s ease;
+			-o-transition: all .3s ease;
+			transition: all .3s ease;
+
+			.menu-principal{
+				a{
+					display: block;
+					padding: 1.875rem 0;
+					border-bottom: 1px solid @vino ;
+				}
+			}
+
+			&.active{
+				left: 0;
+			}
+
+		}
+
+	}
+
+	.portada{
+		padding-top: 3.625rem;
+		height: 100vh;
+		background-image: url("../img/hotel.png");
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		position: relative;
+
+		.overlay{
+			width: 100vw;
+			height: 100vh;
+			top:0;
+			right: 0;
+			bottom:0;
+			background: fade(@negro, 40%);
+			position: absolute;
+			z-index: 1;
+		}
+		.logo{
+			position: relative;
+			z-index: 2;
+			display: flex;
+			justify-content: center;
+			margin-top: 35vh;
+			cursor: default;
+			img{
+				width: 90%;
+				max-width: 43.75rem;
+			}
+		}
+	}
+
+}
+
+/*----------------------------*/
+/*NOSOTROS*/
+/*----------------------------*/
+
+.nosotros{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	
+	.seccion-titulo{
+		width: 95%;
+		max-width: 43.75rem;
+		
+		p{
+			text-align: center;
+
+			&:last-child{
+				padding-bottom: 3rem; 
+			}
+		}
+	}
+
+	.servicios{
+		width: 100%;
+		background: @vino;
+		padding-bottom: 3.5rem;
+
+		.seccion-titulo{
+			color: @blanco;
+			margin: 0 auto;
+		}
+		.seccion-serv{
+			width: 95%;
+			max-width: 93.75rem;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			margin: 0 auto;
+			
+			.sec-serv{
+				width: 100%;
+				// max-width: 500px;
+				padding: 2rem 0;
+				background: @blanco;
+				color: @vino;
+				text-align: center;
+				margin-top: .9375rem;
+
+				i{
+					font-size: 2.1875rem;
+					margin-bottom: 1.125rem;
+				}
+				p{
+					font-size: 1.125rem;
+				}
+			}
+		
+		}
+	}
+}
+
+/*----------------------------*/
+/*HABITACIONES*/
+/*----------------------------*/
+.habitaciones{
+
+	> .seccion-titulo p{
+			text-align: center;
+			font-size: 1rem;
+			font-style: italic;
+	}
+
+	.contenido-habitaciones{
+		margin: 2.5rem 0 1rem;
+
+		.tipo-habitacion{
+			display: flex;
+			justify-content: center;
+			font-weight: 600;
+
+			li{
+				a{
+					padding: 0 .9375rem .3125rem;
+					display: block;
+					border-bottom: 2px solid transparent;
+					&:hover{
+						color: @vino;
+					}
+				}
+				&.active{
+						a{
+							color: @vino;
+							border-bottom: 2px solid @texto-oscuro;
+						}
+					}
+			}
+		}
+	}
+
+	.detalle-habitacion{
+		border: 3px solid @gris;
+		padding: 1rem;
+		.imagen-hab{
+			img{
+				width: 100%;
+			}
+		}
+
+		.seccion-titulo{
+			background: @blanco;
+
+			h2{
+				margin-top: 2rem;
+				font-weight: 600;
+			}
+
+		}
+
+		>div{
+			// display: none;
+			-webkit-transition: all .3s ease;
+			-o-transition: all .3s ease;
+			transition: all .3s ease;
+		}
+
+		.active{
+			display: block;
+		}
+	}
+}
+
+/*----------------------------*/
+/*EVENTOS*/
+/*----------------------------*/
+.eventos{
+	background: @gris;
+	.contenedor{
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: center;
+
+		.seccion-titulo{
+			p{
+				margin-bottom: 2rem;
+			}
+		}
+
+		.col{
+			width: 100%;
+
+			&.izq{
+				overflow: hidden;
+
+			}
+			.slider{
+				width: 300%;
+				display: flex;
+
+				.slide{
+					width: 100%;
+					height: 300px;
+					background-size: cover;
+					background-position: center;
+					
+					&.foto1{
+						background-image: url('../img/salon1.png');
+					}
+
+					&.foto2{
+						background-image: url('../img/salon2.png');
+					}
+
+					&.foto3{
+						background-image: url('../img/salon3.png');
+					}
+				}
+			}
+		}	
+	}
+}
+
+/*----------------------------*/
+/*RESERVA*/
+/*----------------------------*/
+.reserva{
+
+	.seccion-titulo{
+
+			p{
+				margin-bottom: 1.5rem;
+			}
+		}
+
+	.formulario{
+		width: 90%;
+		max-width: 31.25rem;
+		padding: 2.5rem;
+		position: relative;
+		z-index: 3;
+		background: @blanco;
+		margin: 0 auto;
+		.form-contacto{
+			.input-group{
+				position: relative;
+				margin-bottom: 2rem;
+
+				input[type="text"], 
+				input[type="email"],
+				input[type="tel"],
+				textarea{
+					font-family: @principal;
+					font-size: .9375rem;
+					padding: .4rem;
+					color: @texto-oscuro;
+					width: 100%;
+					outline: none;
+					vertical-align: top;
+					border: 1px solid @negro;
+					background: @blanco;
+
+					&:focus{
+						border-color: @vino;
+					}
+				}
+
+				textarea{
+					resize: none;
+					max-height: 6.25rem;	
+				}
+
+				label{
+					font-family: @principal;
+					font-size: 0.875rem;
+					color: @texto-oscuro;
+
+					&.label{
+						position: absolute;
+						top: 0.5rem;
+						left:.5rem;
+						-webkit-transition: all .3s ease;
+						-o-transition: all .3s ease;
+						transition: all .3s ease;
+
+						&.active{
+							top: -1.3rem;
+						}
+					}
+				}
+			}
+
+			input[type="submit"]{
+				font-family: @principal;
+				font-size: 1rem;
+				color: @blanco;
+				width: 100%;
+				padding: .5rem;
+				background: @vino;
+				outline: none;
+				cursor: pointer;
+				border-radius: 0.3125rem;
+				border: 1px solid transparent;
+				-webkit-transition: all .3s ease;
+				-o-transition: all .3s ease;
+				transition: all .3s ease;
+
+				&:hover{
+					background: darken(@vino, 10%);
+				}
+			}
+		}
+	}
+	.contacto{
+		background-image: url('../img/habitacion.png');
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		position: relative;
+		margin-top: -5.625rem;
+
+		.overlay{
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background: fade(@negro, 20%);
+			top: 0;
+			left: 0;
+			z-index: 1;
+		}
+		.contenedor{
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: space-around;
+			position: relative;
+			z-index: 2;
+			padding: 4rem 0;
+			.item{
+				background: @blanco;
+				color: @texto-oscuro;
+				text-align: center;
+				padding: 2rem 1rem;
+				width: 80%;
+				max-width: 18.75rem;
+				margin: 3rem 0;
+				h2{
+					margin-bottom: 1rem;
+				}
+				p{
+					font-size: 15px;
+				}
+			}
+		}
+	}
+}
+
+/*----------------------------*/
+/*PIE DE PÁGINA*/
+/*----------------------------*/
+footer{
+	background: @gris;
+
+	.fbody{
+		padding: 2rem 1rem;
+		text-align: center;
+		border-bottom: 1px solid @vino;
+		i{
+			color: @vino;
+			font-size: 1.25rem;
+			padding: 0 1.5rem;
+			cursor: pointer;
+		}
+	}
+
+	.ffooter{
+		padding: 1rem 0;
+		text-align: center;
+		p{
+			font-size: .75rem;
+		}
+	}
+}
+
+/*----------------------------*/
+/*MEDIA QUERIES*/
+/*----------------------------*/
+
+@media all and (min-width: 1000px){
+	header{
+		.menu-movil{
+			display: none;
+		}
+		.menu-pc{
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			padding: 1.3rem 3.5rem;
+			background: @blanco;
+			z-index: 5;
+			position: fixed;
+			top: 0;
+
+			.menu-principal{
+				a{
+					margin-right:.5rem;
+					padding: 0  2rem;
+					border-right: 1px solid @gris;
+
+					&:last-child{
+						margin-right: 0;
+						border-right: none;
+					}
+
+					&:hover{
+						color: @vino;
+					}
+				}
+				
+			}
+
+			.top-redes{
+
+				i{
+					padding: 0 1.5rem;
+					font-size: 1.125rem;
+					cursor: pointer; 
+					color: @vino;
+				}
+			}
+		}
+	}
+
+}
+
+@media all and (min-width: 700px){
+	.servicios{
+		.seccion-serv{
+			.sec-serv{
+				margin-left: .9375rem;
+				max-width: 25rem;
+			}
+			
+		}
+	}
+}
+
+@media all and (min-width: 800px){
+	.eventos{
+		margin-top: 3.75rem;
+		padding: 4rem 0;
+		.col{
+			max-width: 50%;
+			.seccion-titulo{
+				margin-right: 0.9375rem;
+			}
+		}
+	}
+
+	.reserva{
+		.contenedor .seccion-titulo{
+			padding: 0 3rem;
+		}
+
+		.contacto{
+			display: flex;
+			height: 50rem;
+			align-items: center;
+			margin-top: -10rem;
+		}
+	}
+
+	.habitaciones .detalle-habitacion{
+		border: none;
+		position: relative;
+		.imagen-hab{
+
+			img{
+				width: 90%;
+				display: block;
+				margin: 0 auto;
+			}
+		}
+		
+		.seccion-titulo{
+			position: absolute;
+			z-index: 2;
+			width:16.875rem;
+			padding: 0 2rem;
+			top: 6.25rem;
+			box-shadow: -5px 15px 20px @gris;
+
+			p{
+				text-align: center;
+				padding-bottom: 1rem;
+			}
+		}
+	}
+}

@@ -216,6 +216,7 @@ header .portada .logo img {
   font-weight: 600;
 }
 .habitaciones .detalle-habitacion > div {
+  display: none;
   transition: all 0.3s ease;
 }
 .habitaciones .detalle-habitacion .active {

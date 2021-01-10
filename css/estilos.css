@@ -276,17 +276,17 @@ header .portada .logo img {
   background: #fff;
   margin: 0 auto;
 }
-.reserva .formulario .form-contacto .input-group {
+.reserva .formulario .form_contacto .input-group {
   position: relative;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
-.reserva .formulario .form-contacto .input-group input[type="text"],
-.reserva .formulario .form-contacto .input-group input[type="email"],
-.reserva .formulario .form-contacto .input-group input[type="tel"],
-.reserva .formulario .form-contacto .input-group textarea {
+.reserva .formulario .form_contacto .input-group input[type="text"],
+.reserva .formulario .form_contacto .input-group input[type="email"],
+.reserva .formulario .form_contacto .input-group input[type="tel"],
+.reserva .formulario .form_contacto .input-group textarea {
   font-family: 'Merriweather', serif;
   font-size: 0.9375rem;
-  padding: 0.4rem;
+  padding: 0.5rem;
   color: #3b3324;
   width: 100%;
   outline: none;
@@ -294,31 +294,39 @@ header .portada .logo img {
   border: 1px solid #000;
   background: #fff;
 }
-.reserva .formulario .form-contacto .input-group input[type="text"]:focus,
-.reserva .formulario .form-contacto .input-group input[type="email"]:focus,
-.reserva .formulario .form-contacto .input-group input[type="tel"]:focus,
-.reserva .formulario .form-contacto .input-group textarea:focus {
+.reserva .formulario .form_contacto .input-group input[type="text"]:focus,
+.reserva .formulario .form_contacto .input-group input[type="email"]:focus,
+.reserva .formulario .form_contacto .input-group input[type="tel"]:focus,
+.reserva .formulario .form_contacto .input-group textarea:focus {
   border-color: #76323f;
 }
-.reserva .formulario .form-contacto .input-group textarea {
+.reserva .formulario .form_contacto .input-group textarea {
   resize: none;
   max-height: 6.25rem;
 }
-.reserva .formulario .form-contacto .input-group label {
+.reserva .formulario .form_contacto .input-group label {
   font-family: 'Merriweather', serif;
   font-size: 0.875rem;
   color: #3b3324;
 }
-.reserva .formulario .form-contacto .input-group label.label {
+.reserva .formulario .form_contacto .input-group label.label {
   position: absolute;
   top: 0.5rem;
   left: 0.5rem;
   transition: all 0.3s ease;
 }
-.reserva .formulario .form-contacto .input-group label.label.active {
+.reserva .formulario .form_contacto .input-group label.label.active {
   top: -1.3rem;
 }
-.reserva .formulario .form-contacto input[type="submit"] {
+.reserva .formulario .form_contacto .input-group .error {
+  font-family: 'Merriweather', serif;
+  font-size: 0.8125rem;
+  color: #76323f;
+  position: absolute;
+  left: 0.5rem;
+  top: 2.3rem;
+}
+.reserva .formulario .form_contacto input[type="submit"] {
   font-family: 'Merriweather', serif;
   font-size: 1rem;
   color: #fff;
@@ -331,7 +339,7 @@ header .portada .logo img {
   border: 1px solid transparent;
   transition: all 0.3s ease;
 }
-.reserva .formulario .form-contacto input[type="submit"]:hover {
+.reserva .formulario .form_contacto input[type="submit"]:hover {
   background: #52232c;
 }
 .reserva .contacto {

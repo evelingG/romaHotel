@@ -367,10 +367,10 @@ header{
 		z-index: 3;
 		background: @blanco;
 		margin: 0 auto;
-		.form-contacto{
+		.form_contacto{
 			.input-group{
 				position: relative;
-				margin-bottom: 2rem;
+				margin-bottom: 3rem;
 
 				input[type="text"], 
 				input[type="email"],
@@ -378,7 +378,7 @@ header{
 				textarea{
 					font-family: @principal;
 					font-size: .9375rem;
-					padding: .4rem;
+					padding: .5rem;
 					color: @texto-oscuro;
 					width: 100%;
 					outline: none;
@@ -413,6 +413,16 @@ header{
 							top: -1.3rem;
 						}
 					}
+				}
+
+				.error{
+					font-family: @principal;
+					font-size: .8125rem;
+					color: @vino;
+					position: absolute;
+					left: .5rem;
+					top: 2.3rem;
+
 				}
 			}
 

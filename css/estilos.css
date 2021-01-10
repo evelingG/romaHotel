@@ -278,7 +278,7 @@ header .portada .logo img {
 }
 .reserva .formulario .form_contacto .input-group {
   position: relative;
-  margin-bottom: 3rem;
+  margin-bottom: 3.5rem;
 }
 .reserva .formulario .form_contacto .input-group input[type="text"],
 .reserva .formulario .form_contacto .input-group input[type="email"],

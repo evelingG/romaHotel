@@ -324,7 +324,7 @@ header .portada .logo img {
   color: #76323f;
   position: absolute;
   left: 0.5rem;
-  top: 2.3rem;
+  padding-top: 0.3rem;
 }
 .reserva .formulario .form_contacto input[type="submit"] {
   font-family: 'Merriweather', serif;

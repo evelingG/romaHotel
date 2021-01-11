@@ -425,7 +425,7 @@ footer .ffooter p {
   }
   header .menu-pc .menu-principal a {
     margin-right: 0.5rem;
-    padding: 0  2rem;
+    padding: 0 1.5rem;
     border-right: 1px solid #f0f0f0;
   }
   header .menu-pc .menu-principal a:last-child {
@@ -436,7 +436,7 @@ footer .ffooter p {
     color: #76323f;
   }
   header .menu-pc .top-redes i {
-    padding: 0 1.5rem;
+    padding: 0 1rem;
     font-size: 1.125rem;
     cursor: pointer;
     color: #76323f;

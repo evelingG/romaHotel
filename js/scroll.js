@@ -7,7 +7,8 @@
 		arriba: document.getElementsByClassName('arriba'),
 		destino: null,
 		seccion: null,
-		intervalo: null
+		intervalo: null,
+		flecha: document.getElementsByClassName('bajar')
 	}
 
 
@@ -21,6 +22,11 @@
 			for (var i = 0; i < propScroll.arriba.length; i++) {
 				propScroll.arriba[i].addEventListener('click', metScroll.volverArriba);
 			}
+
+			for (var i = 0; i < propScroll.flecha.length; i++) {
+				propScroll.flecha[i].addEventListener('click', metScroll.moverse);
+			}
+			
 		},
 
 		moverse: function (e) {

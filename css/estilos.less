@@ -74,7 +74,7 @@ header{
 			display: flex;
 			flex-direction: row;
 			justify-content: space-around;
-			width:100%;
+			width: 100%;
 			min-height: 3.625rem;
 			background: @blanco;
 			z-index: 99;
@@ -133,7 +133,7 @@ header{
 
 	.portada{
 		padding-top: 3.625rem;
-		height: 100vh;
+		height: calc(100vh - 3.625rem);
 		background-image: url("../img/hotel.png");
 		background-position: center;
 		background-size: cover;
@@ -142,7 +142,7 @@ header{
 
 		.overlay{
 			width: 100vw;
-			height: 100vh;
+			height: calc(100vh - 3.625rem);
 			top:0;
 			right: 0;
 			bottom:0;
@@ -166,15 +166,15 @@ header{
 		a{
 
 			span{
-				margin-top: 80px;
+				margin-top: 5rem;
 				z-index: 2;
 				position: absolute;
-				bottom: 52px;
+				bottom: 3.25rem;
 				left: 50%;
-				width: 24px;
-				height: 24px;
-				border-left: 3px solid @blanco;
-				border-bottom: 3px solid @blanco;
+				width: 1.5rem;
+				height: 1.5rem;
+				border-left: .1875rem solid @blanco;
+				border-bottom: .1875rem solid @blanco;
 				opacity: 0;
 				-webkit-transform: rotate(-45deg);
 				transform: rotate(-45deg);
@@ -187,13 +187,13 @@ header{
 				}
 
 				&:nth-of-type(2){
-					bottom: 36px;
+					bottom: 2.25rem;
 					-webkit-animation-delay: .15s;
 					animation-delay: .15s;
 				}
 
 				&:nth-of-type(3){
-					bottom: 20px;
+					bottom: 1.25rem;
 					-webkit-animation-delay: .3s;
 					animation-delay: .3s;
 				}
@@ -363,6 +363,7 @@ header{
 /*----------------------------*/
 .eventos{
 	background: @gris;
+	margin-top: 3rem;
 	.contenedor{
 		display: flex;
 		flex-flow: row wrap;
@@ -624,6 +625,12 @@ footer{
 					cursor: pointer; 
 					color: @vino;
 				}
+			}
+		}
+		.portada{
+			height: 100vh;
+			.overlay{
+				height: 100vh;
 			}
 		}
 	}

@@ -94,7 +94,7 @@ header .menu-movil .slide-menu.active {
 }
 header .portada {
   padding-top: 3.625rem;
-  height: 100vh;
+  height: calc(100vh - 3.625rem);
   background-image: url("../img/hotel.png");
   background-position: center;
   background-size: cover;
@@ -103,7 +103,7 @@ header .portada {
 }
 header .portada .overlay {
   width: 100vw;
-  height: 100vh;
+  height: calc(100vh - 3.625rem);
   top: 0;
   right: 0;
   bottom: 0;
@@ -123,15 +123,15 @@ header .portada .logo img {
   max-width: 43.75rem;
 }
 header .portada a span {
-  margin-top: 80px;
+  margin-top: 5rem;
   z-index: 2;
   position: absolute;
-  bottom: 52px;
+  bottom: 3.25rem;
   left: 50%;
-  width: 24px;
-  height: 24px;
-  border-left: 3px solid #fff;
-  border-bottom: 3px solid #fff;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-left: 0.1875rem solid #fff;
+  border-bottom: 0.1875rem solid #fff;
   opacity: 0;
   transform: rotate(-45deg);
   animation: animacion 2s infinite;
@@ -140,11 +140,11 @@ header .portada a span:nth-of-type(1) {
   animation-delay: 0s;
 }
 header .portada a span:nth-of-type(2) {
-  bottom: 36px;
+  bottom: 2.25rem;
   animation-delay: 0.15s;
 }
 header .portada a span:nth-of-type(3) {
-  bottom: 20px;
+  bottom: 1.25rem;
   animation-delay: 0.3s;
 }
 @keyframes animacion {
@@ -262,6 +262,7 @@ header .portada a span:nth-of-type(3) {
 /*----------------------------*/
 .eventos {
   background: #f0f0f0;
+  margin-top: 3rem;
 }
 .eventos .contenedor {
   display: flex;
@@ -478,6 +479,12 @@ footer .ffooter p {
     font-size: 1.125rem;
     cursor: pointer;
     color: #76323f;
+  }
+  header .portada {
+    height: 100vh;
+  }
+  header .portada .overlay {
+    height: 100vh;
   }
 }
 @media all and (min-width: 700px) {

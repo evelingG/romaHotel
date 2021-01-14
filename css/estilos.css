@@ -33,7 +33,7 @@ ul {
   margin-top: 3.75rem;
 }
 .seccion-titulo p {
-  font-size: 0.9375rem;
+  font-size: 0.875rem;
   line-height: 1.6rem;
 }
 .contenedor {
@@ -314,7 +314,7 @@ header .portada a span:nth-of-type(3) {
 }
 .reserva .formulario .form_contacto .input-group {
   position: relative;
-  margin-bottom: 3.5rem;
+  margin-bottom: 3rem;
 }
 .reserva .formulario .form_contacto .input-group input[type="text"],
 .reserva .formulario .form_contacto .input-group input[type="email"],
@@ -356,7 +356,7 @@ header .portada a span:nth-of-type(3) {
 }
 .reserva .formulario .form_contacto .input-group .error {
   font-family: 'Merriweather', serif;
-  font-size: 0.8125rem;
+  font-size: 0.6875rem;
   color: #76323f;
   position: absolute;
   left: 0.5rem;
@@ -446,6 +446,9 @@ footer .ffooter p {
 /*MEDIA QUERIES*/
 /*----------------------------*/
 @media all and (min-width: 1000px) {
+  body {
+    font-size: 16px;
+  }
   header .menu-movil {
     display: none;
   }

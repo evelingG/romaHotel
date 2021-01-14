@@ -97,7 +97,7 @@ header .menu-movil .slide-menu.active {
 }
 header .portada {
   padding-top: 3.625rem;
-  height: calc(100vh - 3.625rem);
+  height: calc(100vh - 3.125rem);
   background-image: url("../img/hotel.png");
   background-position: center;
   background-size: cover;
@@ -106,7 +106,7 @@ header .portada {
 }
 header .portada .overlay {
   width: 100vw;
-  height: calc(100vh - 3.625rem);
+  height: 100%;
   top: 0;
   right: 0;
   bottom: 0;

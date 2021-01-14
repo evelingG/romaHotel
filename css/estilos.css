@@ -44,6 +44,9 @@ ul {
 /*----------------------------*/
 /*ENCABEZADO*/
 /*----------------------------*/
+header .menu-pc {
+  display: none;
+}
 header .menu-movil .menu-top {
   display: flex;
   flex-direction: row;
@@ -446,9 +449,6 @@ footer .ffooter p {
 /*MEDIA QUERIES*/
 /*----------------------------*/
 @media all and (min-width: 1000px) {
-  body {
-    font-size: 16px;
-  }
   header .menu-movil {
     display: none;
   }
